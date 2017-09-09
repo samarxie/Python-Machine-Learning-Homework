@@ -35,7 +35,7 @@ def Det(matrix,n):
                 index = j
                 break
         if(index == -1): # 如果所有首元素都为0，则行列式为0
-              return 0.00
+              return 0.
         else:
             if(index != i):
                 # 交换第index行与第i行
@@ -44,7 +44,7 @@ def Det(matrix,n):
         # 利用第i行将其余各行第i列变为0
         for k in range(i+1,n):
             if(float(matrix[i][i]) == 0.):
-                return 0.00
+                return 0.
             coef = -matrix[k][i]/float(matrix[i][i])
             for t in range(i,n):
                 matrix[k][t] = matrix[k][t] + coef*matrix[i][t]
@@ -59,7 +59,7 @@ def Det(matrix,n):
 def Inv(matrix,n):
     matrix_copy = deepcopy(matrix)
     det = Det(matrix,n) # 行列式
-    if(abs(det)<1e-8): # 如果行列式为0(或者接近0)
+    if(det == 0.): # 如果行列式为0
         # 矩阵不可逆
         return False,None
     else: # 矩阵可逆
