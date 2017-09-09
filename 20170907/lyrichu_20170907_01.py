@@ -30,6 +30,8 @@ def Det(matrix,n):
                 sign = -sign
         # 利用第i行将其余各行第i列变为0
         for k in range(i+1,n):
+            if(float(matrix[i][i]) == 0.):
+                return 0.00
             coef = -matrix[k][i]/float(matrix[i][i])
             for t in range(i,n):
                 matrix[k][t] = matrix[k][t] + coef*matrix[i][t]
