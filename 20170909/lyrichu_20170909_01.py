@@ -39,7 +39,7 @@ def Det(matrix,n):
         else:
             if(index != i):
                 # 交换第index行与第i行
-                matrix[i],matrix[index] = matrix[i],matrix[index]
+                matrix[i],matrix[index] = matrix[index],matrix[i]
                 sign = -sign
         # 利用第i行将其余各行第i列变为0
         for k in range(i+1,n):
@@ -85,7 +85,7 @@ def Inv(matrix,n):
 
             if(index != i):
                 # 交换第index行与第i行
-                new_matrix[i],new_matrix[index] = new_matrix[i],new_matrix[index]
+                new_matrix[i],new_matrix[index] = new_matrix[index],new_matrix[i]
             # 利用第i行将其余各行第i列变为0
             for k in range(i+1,n):
                 coef = -new_matrix[k][i]/float(new_matrix[i][i])
