@@ -19,7 +19,6 @@ def ave_length(str):
             frequency = 1
             fraction_str += 1
 
-    all = sum(frequency_list)
-    print(all/fraction_str)
+    print(len(str)/fraction_str)
 
-ave_length("aabbcddaaaa")
+ave_length("aabbcddaaaad")
