@@ -24,3 +24,4 @@ def method(NUM):
     print(res)
 
 method(100)
+ 
