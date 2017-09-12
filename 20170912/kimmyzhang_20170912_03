@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: Kimmyzhang
+@Email: 902227553.com 
+@File: kimmyzhang_20170912_03.py
+@Time: 2017/9/12 15:38
+"""
+
+def ave_length(str):
+    fraction_str = 1
+    frequency = 1
+    frequency_list = []
+    for i in range(len(str) - 1):
+        if str[i] == str[i + 1]:
+            frequency += 1
+        else:
+            frequency_list.append(frequency)
+            frequency = 1
+            fraction_str += 1
+
+    all = sum(frequency_list)
+    print(all/fraction_str)
+
+ave_length("aabbcddaaaa")
