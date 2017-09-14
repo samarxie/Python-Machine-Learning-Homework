@@ -19,8 +19,7 @@ def clockwisePrint(martix):
     if  divmod(martix_demsion, 2)[1]== 0:
         for i in range(times):
             j = i
-            while j < martix_demsion - i:
-            # for j in range(martix_demsion):
+            while j < martix_demsion - i：
                 if j == i :
                     temp1 = temp1 + martix[j][i : martix_demsion - i]
                 elif j == (martix_demsion - i - 1):
