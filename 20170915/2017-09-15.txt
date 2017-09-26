@@ -1,0 +1,15 @@
+Q1: 使用python实现二叉排序树(二叉查找树)
+
+Q2:请阅读任意一本数据结构与算法的书籍(比如群文件里的《大话数据结构》等)，了解字符串的朴素匹配与KMP匹配算法。并使用python实现。
+
+Q3：使用python实现基本的快速排序算法(quick sort)。
+
+Q4(选做,基础数据抓取)
+熟悉python的urllib2(python2.x)或urllib3(python3.x),具体可以参考博文:http://www.cnblogs.com/wly923/archive/2013/05/07/3057122.html
+(urllib2) 和 http://www.cnblogs.com/KGoing/p/6146999.html(urllib3),或者阅读官方文档:https://docs.python.org/2/library/urllib2.html
+,https://urllib3.readthedocs.io/en/latest/。
+实现下面的功能。
+(1)抓取http://news.sina.com.cn/o/2017-09-13/doc-ifykuftz6758652.shtml 的新闻内容。将其内容保存到news1.txt，并统计新闻总字数(不算标点符号)
+，共出现多少个不同的字，以及每个字出现次数(不算标点)。
+(2)抓取 http://slide.news.sina.com.cn/z/slide_1_64237_200066.html#p=1 的一组图片。将其保存到 images文件夹下，每张图片按照1.jpg,2.jpg,...
+这样的格式命名。并且抓取每张图片下面的文字，将所有文字保存到comments.txt 文件。
