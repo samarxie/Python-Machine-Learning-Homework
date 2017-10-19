@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: Kimmyzhang
+@Email: 902227553.com 
+@File: armstrong_number.py
+@Time: 2017/10/19 8:48
+"""
+
+
+# 判断是否为armstrong_number
+def is_armstrong_number(num):
+    num_str = str(num)
+    num_digit = len(num_str)
+    if num == sum(map(lambda x: int(x)**num_digit, list(num_str))):
+        return True
+    else:
+        return False
+
+
+if __name__ == '__main__':
+    num = 1000000
+    for i in range(1, num + 1):
+        if is_armstrong_number(i):
+            print(i)
