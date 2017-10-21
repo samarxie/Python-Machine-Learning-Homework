@@ -41,7 +41,7 @@ def Perceptron1(a,w,b,x):
     return w,b
 
 def Perceptron2(a,b,x):
-    #感知机学习算法的对偶形式(未完成)
+    #感知机学习算法的对偶形式
     #计算Gram矩阵    
     G =[]
     x = np.mat(x)
