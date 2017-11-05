@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3.6
 # -*- coding: utf-8 -*-
 # @Time   : 2017/9/7 15:47
 # @Author : Lyrichu
@@ -34,7 +34,7 @@ def Det(matrix,n):
                 return 0.
             coef = -matrix[k][i]/float(matrix[i][i])
             for t in range(i,n):
-                matrix[k][t] = matrix[k][t] + coef*matrix[i][t]
+                matrix[k][t]  += coef*matrix[i][t]
     res = 1.
     for i in range(n):
         res *= matrix[i][i]
@@ -42,11 +42,11 @@ def Det(matrix,n):
     return res
 
 if __name__ == '__main__':
-    n = int(raw_input()) # 方阵维数
+    n = int(input()) # 方阵维数
     matrix = []
     for i in range(n):
-        line = raw_input().split(" ")
-        line = map(lambda x:float(x),line)
+        line = input().split(" ")
+        line = list(map(lambda x:float(x),line))
         matrix.append(line)
     det = Det(matrix,n)
     print("%.2f" % det)

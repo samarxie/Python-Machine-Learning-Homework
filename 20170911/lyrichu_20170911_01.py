@@ -49,5 +49,5 @@ def geohash(n):
     return code_str
 
 if __name__ == '__main__':
-    n = int(raw_input())
+    n = int(input())
     print(geohash(n))

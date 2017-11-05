@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3.6
 # -*- coding: utf-8 -*-
 # @Time   : 2017/9/6 8:53
 # @Author : Lyrichu
@@ -7,8 +7,8 @@
 '''
 @Description:求最短路程
 '''
-num = int(raw_input()) # 输入点的数量
-points_list = raw_input().split(" ")
+num = int(input()) # 输入点的数量
+points_list = input().split(" ")
 points_list = [int(point) for point in points_list] # 点列表
 all_distance = 0
 # 计算所有相邻点总距离

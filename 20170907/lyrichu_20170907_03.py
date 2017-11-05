@@ -5,7 +5,7 @@
 # @Email  : 919987476@qq.com
 # @File   : lyrichu_20170907_03.py
 '''
-@Description:计算最大乘积
+@Description:计算最大乘积(暴力枚举)
 '''
 from itertools import combinations
 # 计算列表所有元素乘积
@@ -15,8 +15,8 @@ def product(mylist):
         res *= i
     return res
 
-n,m,k = map(lambda x:int(x),raw_input().split(" ")) # 学生人数
-power_list = map(lambda x:int(x),raw_input().split(" ")) # 钱数列表
+n,m,k = map(lambda x:int(x),input().split(" ")) # 学生人数
+power_list = list(map(lambda x:int(x),input().split(" "))) # 钱数列表
 product_list = [] # 钱数乘积列表
 power_comb_list = list(combinations(range(n),m))
 for power_comb in power_comb_list:

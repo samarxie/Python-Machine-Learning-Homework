@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3.6
 # -*- coding: utf-8 -*-
 # @Time   : 2017/9/6 22:56
 # @Author : Lyrichu
@@ -39,8 +39,8 @@ def combinations(mylists,m,n):
     return res_list
 
 if __name__ == '__main__':
-    m,n = map(lambda x:int(x),raw_input().split(" "))
-    mylists = map(lambda x:int(x),raw_input().split(" ")) # 数字列表
+    m,n = map(lambda x:int(x),input().split(" "))
+    mylists = list(map(lambda x:int(x),input().split(" "))) # 数字列表
     comb_list = combinations(mylists,m,n)
     for comb in comb_list:
         print(" ".join(map(lambda x:str(x),comb)))
