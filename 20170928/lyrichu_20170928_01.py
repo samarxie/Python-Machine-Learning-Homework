@@ -84,7 +84,7 @@ def prettyPrint(solveList):
 
 
 if __name__ == '__main__':
-    solveList = eightQueens()
+    solveList = eightQueens(20)
     print(solveList)
     prettyPrint(solveList)
 

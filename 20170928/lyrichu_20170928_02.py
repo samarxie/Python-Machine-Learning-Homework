@@ -116,7 +116,7 @@ def prettyPrint(expression):
 
 
 if __name__ == '__main__':
-    numbersList = map(lambda x:int(x),raw_input().split(" "))
+    numbersList = list(map(lambda x:int(x),input().split(" ")))
     resList = points24(numbersList)
     # index 统计解的个数
     index = 0

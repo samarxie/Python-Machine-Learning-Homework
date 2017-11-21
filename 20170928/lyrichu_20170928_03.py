@@ -102,9 +102,9 @@ if __name__ == '__main__':
     dataArray = generateData(k,mu,sigma,dataNum)
     # 参数的初始值
     # 注意em算法对于参数的初始值是十分敏感的
-    k0 = [0.5,0.3,0.2]
-    mu0 = [8,5,2]
-    sigma0 = [2,3,7]
+    k0 = [0.1,0.4,0.5]
+    mu0 = [3,3,2]
+    sigma0 = [2,1,1.5]
     step = 6
     # 使用em算法估计参数
     k1,mu1,sigma1 = em(dataArray,k0,mu0,sigma0,step)
