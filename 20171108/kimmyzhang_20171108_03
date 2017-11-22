@@ -1,0 +1,57 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: Kimmyzhang
+@Email: 902227553.com 
+@File: Mirror_Trans.py
+@Time: 2017/11/22 10:30
+Q:
+操作给定的二叉树，将其变换为源二叉树的镜像。
+输入描述:
+
+二叉树的镜像定义：源二叉树
+    8
+   /  \
+  6   10
+ / \  / \
+5  7 9 11
+镜像二叉树
+    8
+   /  \
+  10   6
+ / \  / \
+11 9 7   5
+
+"""
+from Demo_data_algo.Data.Tree.TreeNode import TreeNode, lever_order
+
+
+class Solution:
+    def mirror_trans(self, root):
+
+        node = root
+        if node:
+            if not node.left:
+                # print(node.val)
+                node.left = node.right
+            if not node.right:
+                node.right = node.left
+
+            node.left, node.right = node.right, node.left
+            self.mirror_trans(node.left)
+            self.mirror_trans(node.right)
+        else:
+            return
+
+
+if __name__ == '__main__':
+    root = TreeNode(8)
+    root.left = TreeNode(6)
+    root.right = TreeNode(10)
+    root.left.left = TreeNode(5)
+    root.left.right = TreeNode(7)
+    root.right.left = TreeNode(9)
+    root.right.right = TreeNode(11)
+
+    Solution().mirror_trans(root)
+    lever_order(root)
