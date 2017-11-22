@@ -34,8 +34,10 @@ class Solution:
             if not node.left:
                 # print(node.val)
                 node.left = node.right
+                node.right = None
             if not node.right:
                 node.right = node.left
+                node.left = None
 
             node.left, node.right = node.right, node.left
             self.mirror_trans(node.left)
