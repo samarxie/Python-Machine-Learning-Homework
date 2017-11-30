@@ -7,7 +7,7 @@ Q2：输入两个整数序列，第一个序列表示栈的压入顺序，请判
 '''
 
 def is_pop_stack(push_stack,pop_stack):
-	if(len(push_stack) == 0 or len(pop_stack)== 0 or push_stack!=pop_stack):
+	if(len(push_stack) == 0 or len(pop_stack)== 0 or len(push_stack)!=len(pop_stack)):
 		return False
 	# 模拟入栈和出栈
 	n = len(push_stack) # 栈长
