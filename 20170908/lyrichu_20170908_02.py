@@ -16,7 +16,7 @@
 样例输出2：
 34 45 97
 '''
-m = int(raw_input())
+m = int(input())
 restNum = 100 # 剩余人数
 indexNumberList = [[i,(i-1)%m + 1] for i in range(1,restNum+1)] # [学生序号,列表] 组成的列表
 lastNumber = m if restNum % m == 0 else restNum % m # 最后一个学生的报数
