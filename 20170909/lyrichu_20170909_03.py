@@ -31,7 +31,7 @@ def magic(n):
     """
     matrix = [[0 for i in range(n)] for j in range(n)] # 初始化幻方
     value = 1 # value 为下一个填入幻方的值
-    position = [0,(n+1)/2 - 1] # 当前的位置
+    position = [0,(n+1)//2 - 1] # 当前的位置
     matrix[position[0]][position[1]] = value
     while(value < n*n):
         rightUpPos = [position[0]-1,position[1]+1] # 右上角坐标，行减1，列加1
@@ -54,7 +54,7 @@ def magic(n):
     return matrix
 
 if __name__ == '__main__':
-    n = int(raw_input())
+    n = int(input())
     matrix = magic(n)
     for i in range(n):
         print(" ".join(map(lambda x:str(x),matrix[i])))

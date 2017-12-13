@@ -50,4 +50,4 @@ def getIndex(s):
 
 
 if __name__ == '__main__':
-    print(getIndex(raw_input()))
+    print(getIndex(input()))

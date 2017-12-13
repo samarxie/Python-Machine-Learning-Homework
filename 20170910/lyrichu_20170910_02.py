@@ -74,7 +74,7 @@ def recur_decompose(n):
         return res_list_set
 
 if __name__ == '__main__':
-    n = int(raw_input())
+    n = int(input())
     res_list = decompose(n)[n]
     res_list.sort(key=lambda x:len(x))
     for v in res_list:

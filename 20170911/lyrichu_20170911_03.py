@@ -108,7 +108,7 @@ def new_solveBlocks(int_list):
         return new_solve(left_list,False) + new_solve(right_list,True)
 
 if __name__ == '__main__':
-    int_list = map(lambda x:int(x),raw_input().split(" "))
+    int_list = list(map(lambda x:int(x),input().split(" ")))
     count1,res_list = solveBlocks(int_list)
     # 打印水块的数目
     print("解法一:")
@@ -119,6 +119,6 @@ if __name__ == '__main__':
     print("解法二:")
     count2 = new_solveBlocks(int_list)
     print("雨滴数量为 %d" % count2)
-
+	
 
 
