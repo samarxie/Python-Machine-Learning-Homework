@@ -33,7 +33,7 @@ int main(void)
 // 如果没有找到，则返回 false,找到返回true
 bool find_sums(int *arr,int n,int s,int *first,int *second)
 {
-	if(s <= 0)
+	if(s <= 0 || s < 2*arr[0] || s > 2*arr[n-1])
 		return false;
 	// 当前搜索位置
 	int current = 0;

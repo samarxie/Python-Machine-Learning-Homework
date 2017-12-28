@@ -102,13 +102,13 @@ void output()
 	cout<<"Please input a string:"<<endl;
 	string str;
 	getline(cin,str);
-	cout<<"How many chars do you want to move left:";
+	cout<<"How many chars do you want to move from left:";
 	int move;
 	cin>>move;
 	bool if_succeed = str_left_move(str,move);
 	if(if_succeed)
 	{
-		cout<<"After move "<<move<<" chars to left,the string is:"<<endl;
+		cout<<"After move "<<move<<" chars from left,the string is:"<<endl;
 		cout<<str<<endl;
 	}
 }

@@ -41,7 +41,7 @@ void get_sums_series(int s,vector<vector<int>> &v)
 			v1.erase(v1.begin()); // 删除第一个元素
 		else
 		{
-			v.push_back(v1);
+			v.push_back(v1); // 注意这里添加的是拷贝而不是引用
 			v1.erase(v1.begin());
 		}
 	}

@@ -50,6 +50,9 @@ bool if_convert_concrete(int *arr,int n)
 	int next = zeros_num + 1;
 	while(next < n)
 	{
+		//如果有两个数字相等，则一定构不成顺子
+		if(arr[next]==arr[current])
+			return false;
 		gap_nums += arr[next] - arr[current] -1;
 		current = next;
 		next++;
