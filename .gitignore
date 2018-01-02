@@ -106,3 +106,6 @@ venv.bak/
 CMakeLists.txt
 .idea/
 cmake-build-debug/
+*.xml
+*.txt 
+ 
