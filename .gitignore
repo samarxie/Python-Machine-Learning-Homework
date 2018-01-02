@@ -103,6 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 *.exe 
-*.txt
+CMakeLists.txt
 .idea/
 cmake-build-debug/
