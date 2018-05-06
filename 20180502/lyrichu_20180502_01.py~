@@ -1,0 +1,18 @@
+# -*- coding:utf-8 -*-
+'''
+Q1:给定一个数组arr和一个数字target,arr中的数字都是正数，target为正整数，求出arr中和为target的两个数字,返回两个数字的下标(假设是唯一的)
+'''
+def solution(arr,target):
+	# 使用hash table
+	d = {}
+	for i in range(len(arr)):
+		if (target -arr[i]) in d:
+			return (i,d[target-arr[i]])
+		d[arr[i]] = i
+		
+if __name__ == '__main__':
+	arr = [2,1,4,10,7,9]
+	target = 12
+	res = solution(arr,target)
+	print(res)
+		
